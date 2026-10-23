@@ -1,0 +1,23 @@
+# secrets and personal data - never commit
+.env
+data/
+data_backup*/
+guide/
+
+web/node_modules/
+web/dist/
+
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+
+brag-output/work/
+
+# personal files - not for a public repo
+*RESUME*.pdf
+Job Dedo - Step by Step Guide.pdf
+brag-output/
+# old Streamlit UI, replaced by run.py + web/
+app.py
+web/*.tsbuildinfo
