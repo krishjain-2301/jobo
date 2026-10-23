@@ -2,6 +2,21 @@
 
 Find jobs that actually fit your resume, reach the right inbox, and keep every application on track.
 
+![Job Dedo dashboard](docs/screenshot-dashboard.png)
+
+<table>
+  <tr>
+    <td><img src="docs/screenshot-discover.png" alt="Discover: every job scored against your resume, with matched and missing skills"></td>
+    <td><img src="docs/screenshot-pipeline.png" alt="Pipeline: apply on the company's site or find the hiring email"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Discover: every opening scored against your resume (dark theme)</sub></td>
+    <td align="center"><sub>Pipeline: apply on site, or find the hiring email</sub></td>
+  </tr>
+</table>
+
+<sub>Screenshots use a fictional demo profile (a frontend developer) and real public job postings.</sub>
+
 1. **Discovers jobs at the source.** It scans company career pages directly through the public job feeds of 8 hiring systems (Greenhouse, Lever, Ashby, Workable, SmartRecruiters, Workday, Recruitee, Personio), finds new companies by searching the web for their job pages, imports the jobs from your LinkedIn / Naukri / Indeed / Internshala / Glassdoor alert emails, and searches job boards.
 2. **Scores every job against your resume.** It shows a match score, the skills you have (✓) and the ones the posting asks for that you don't (+), and the seniority level. Roles that don't fit are filtered out, and freshers can hide anything asking for 2+ years.
 3. **Picks the right way to apply.** Jobs from a company's own board get an **Apply on site** link and a *Mark applied* button. For everything else it finds the hiring email (`careers@`, `hiring@`, `jobs@`…) on the company's website.
@@ -88,6 +103,8 @@ What it deliberately doesn't do: log into LinkedIn or Naukri, scrape them, or au
 Write to hiring addresses, keep each email relevant to the company, and stop if someone asks you to. In some places, unsolicited email is regulated (e.g. CAN-SPAM in the US, GDPR in the EU), so you are responsible for how you use this tool.
 
 ## Development
+
+Set `JOB_DEDO_DATA_DIR` to run with a separate data folder (e.g. a demo profile) without touching your own `data/`.
 
 ```bash
 python run.py --reload --no-browser   # API on :8000, restarts on Python changes

@@ -1,12 +1,14 @@
 """SQLite storage for companies, drafts and the sent-mail log."""
 
 import json
+import os
 import re
 import sqlite3
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+# JOB_DEDO_DATA_DIR points the app at another folder, e.g. a demo profile that keeps your own data separate
+DATA_DIR = Path(os.environ.get("JOB_DEDO_DATA_DIR") or Path(__file__).resolve().parent.parent / "data")
 DB_PATH = DATA_DIR / "job_applier.db"
 
 # Lifecycle of a company row
